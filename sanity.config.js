@@ -2,17 +2,19 @@ import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
-import { config as dotenvConfig } from 'dotenv';
+import dotenv from 'dotenv';
 
-dotenvConfig(); // Loads .env variables into process.env
 
+if (typeof window === 'undefined') {
+  dotenv.config()
+}
 
 export default defineConfig({
   name: 'default',
   title: 'devs-portfolio',
 
-  projectId: process.env.SANITY_PROJECT_ID,
-  dataset: process.env.SANITY_DATASET,
+  projectId: 'y4nk4kbp',
+  dataset: 'production',
 
   plugins: [structureTool(), visionTool()],
 
