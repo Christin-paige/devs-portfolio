@@ -2,12 +2,6 @@ import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
-import dotenv from 'dotenv';
-
-
-if (typeof window === 'undefined') {
-  dotenv.config()
-}
 
 export default defineConfig({
   name: 'default',
