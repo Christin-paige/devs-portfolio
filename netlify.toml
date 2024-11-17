@@ -1,0 +1,9 @@
+[build]
+  base = "devs-portfolio"       # The folder containing the frontend app
+  publish = "dist"              # Where the build files are output
+  command = "npm run build"     # Command to build your frontend
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
